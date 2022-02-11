@@ -19,9 +19,34 @@ const fs = require('fs');
 //   }
 // });
 
-fs.readFile('./index.js', 'utf8', function(err, fileContent) {
+// let content = '';
+
+// fs.readFile('./index.js', 'utf8', function(err, fileContent) {
+//   if(err) {
+//     throw err;
+//   }
+//   content = fileContent;
+
+//   fs.writeFile('./newFile.js', content, function(err) {
+//     if(err) {
+//       throw err;
+//     }
+//     console.log('File write operation have been successful done!');
+//   });
+// });
+
+// fs.rename('./newFile.js', 'myFile.js', function(err) {
+//   if(err) {
+//     throw err;
+//   }
+//   console.log("renaming has been successful done!");
+// });
+
+fs.unlink('./myFile.js', function(err) {
   if(err) {
     throw err;
   }
-  console.log(fileContent);
+  console.log("delating has been successful done!");
 });
+
+
