@@ -42,11 +42,18 @@ const fs = require('fs');
 //   console.log("renaming has been successful done!");
 // });
 
-fs.unlink('./myFile.js', function(err) {
+// fs.unlink('./myFile.js', function(err) {
+//   if(err) {
+//     throw err;
+//   }
+//   console.log("delating has been successful done!");
+// });
+
+fs.writeFile("./workWithHttpModule.js", "", (err) => {
   if(err) {
     throw err;
   }
-  console.log("delating has been successful done!");
+  console.log("work with http module file successful created!");
 });
 
 
